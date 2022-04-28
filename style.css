@@ -1,0 +1,44 @@
+.form {
+    float: left;
+    margin-top: 30px;
+    margin-left: 10%;
+    padding: 15px;
+    border:1px solid silver;
+    border-radius: 6px;
+    width: 50%;
+    background-color: #fff;
+}
+.form input[type="submit"]:hover {
+    border-bottom: 3px solid rgb(77, 91, 179);
+}
+.form input[type="submit"]:active {
+    border-bottom: 1px solid rgb(77, 91, 179);
+}
+.koment {
+    float: left;
+    margin-top: 30px;
+    margin-left: 10%;
+    padding: 15px;
+    border:1px solid silver;
+    border-radius: 6px;
+    width: 50%;
+    background-color: #fff;
+}
+.koment img {
+    float: left;
+    width: 25%;
+    border-radius: 20%;
+}
+.koment > .name {
+    width: 70%;
+    float: left;
+    color:blue;
+    font-size: 1.3em;
+    margin-left: 20px;
+}
+.koment > .message {
+    font-size: 1.1em;
+    float: left;
+    padding-left: 10px;
+    color:brown;
+}
