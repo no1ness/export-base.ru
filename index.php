@@ -1,5 +1,11 @@
 <?php
     require "db.php";
+    if(isset($_POST['delete'])) {
+        if(mysqli_query($con, "DELETE FROM koments WHERE id = " . (int)$_POST['id'])) {
+        echo 'success';
+        }
+        }
+
     if (isset($_POST['send'])) {
         if (trim($_POST['name']) == "" || trim($_POST['message']) == "" || trim($_POST['subject'])) 
             {
@@ -13,9 +19,7 @@
     R::store($koments);
     header('location: /');
 }
-
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -47,6 +51,10 @@
                 </div>
             </div>
 
+            <form method="POST">
+            <input type="hidden" name="id" value="<?= $kom['id'] ?>">
+            <input type="submit" name="delete" value="x">
+            </form>
     </div>
     <?php } ?>
 </body>
